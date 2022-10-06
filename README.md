@@ -2,6 +2,13 @@
 
 You can get some information about Breaking Bad characters, episodes, and etc. also you can read some quotes by these characters.
 
+Characters Tab:
+
+
+https://user-images.githubusercontent.com/81614806/194431324-763937ed-bcca-4ad8-9b1e-32bda98673a9.MP4
+
+
+
 # App Information:
 
 Framework: SwiftUI
