@@ -23,10 +23,11 @@ https://user-images.githubusercontent.com/81614806/194431679-854da16d-5c40-43a1-
 Refreshable Views With Custom Animations:
 
 
-Uploading 13e5b973-44d7-4ec7-9ab1-07e29c443a50.MP4…
 
 
-Uploading 13e5b973-44d7-4ec7-9ab1-07e29c443a50.MP4…
+https://user-images.githubusercontent.com/81614806/194432049-cd5a4006-4449-49ab-8ece-0b9079dc19d6.MP4
+
+
 
 
 # App Information:
