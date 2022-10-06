@@ -7,6 +7,26 @@ Characters Tab:
 
 https://user-images.githubusercontent.com/81614806/194431324-763937ed-bcca-4ad8-9b1e-32bda98673a9.MP4
 
+Episodes Tab:
+
+
+
+https://user-images.githubusercontent.com/81614806/194431619-5c6269b4-7ac2-43f7-ad9a-2619e81eadcb.MP4
+
+Quotes Tab:
+
+
+
+https://user-images.githubusercontent.com/81614806/194431679-854da16d-5c40-43a1-97b2-fe46f322e9a2.MP4
+
+
+Refreshable Views With Custom Animations:
+
+
+Uploading 13e5b973-44d7-4ec7-9ab1-07e29c443a50.MP4…
+
+
+Uploading 13e5b973-44d7-4ec7-9ab1-07e29c443a50.MP4…
 
 
 # App Information:
