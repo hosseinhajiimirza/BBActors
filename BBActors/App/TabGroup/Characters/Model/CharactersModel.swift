@@ -35,13 +35,13 @@ struct CharacterModel: Codable, Identifiable {
         if let name = try? keyedCodingContainer.decode(String.self, forKey: CodingKeys.name) {
             self.name = name
         } else {
-            self.name = "No name"
+            self.name = ""
         }
         
         if let birthday = try? keyedCodingContainer.decode(String.self, forKey: CodingKeys.birthday) {
             self.birthday = birthday
         } else {
-            self.birthday = "Unknown"
+            self.birthday = ""
         }
         
         if let occupation = try? keyedCodingContainer.decode([String].self, forKey: CodingKeys.occupation) {
@@ -53,7 +53,7 @@ struct CharacterModel: Codable, Identifiable {
         if let img = try? keyedCodingContainer.decode(String.self, forKey: CodingKeys.img) {
             self.img = img
         } else {
-            self.img = "No ImageURL"
+            self.img = ""
         }
         
         if let status = try? keyedCodingContainer.decode(Status.self, forKey: CodingKeys.status) {
@@ -65,7 +65,7 @@ struct CharacterModel: Codable, Identifiable {
         if let nickname = try? keyedCodingContainer.decode(String.self, forKey: CodingKeys.nickname) {
             self.nickname = nickname
         } else {
-            self.nickname = "No Nickname"
+            self.nickname = ""
         }
         
         if let appearance = try? keyedCodingContainer.decode([Int].self, forKey: CodingKeys.appearance) {
@@ -77,13 +77,13 @@ struct CharacterModel: Codable, Identifiable {
         if let portrayed = try? keyedCodingContainer.decode(String.self, forKey: CodingKeys.portrayed) {
             self.portrayed = portrayed
         } else {
-            self.portrayed = "No Portrayed"
+            self.portrayed = ""
         }
         
         if let category = try? keyedCodingContainer.decode(String.self, forKey: CodingKeys.category) {
             self.category = category
         } else {
-            self.category = "No Category"
+            self.category = ""
         }
         
         if let betterCallSaulAppearance = try? keyedCodingContainer.decode([Int].self, forKey: CodingKeys.betterCallSaulAppearance) {

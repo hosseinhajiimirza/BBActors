@@ -1,5 +1,5 @@
 //
-//  HomeRow.swift
+//  CharactersRow.swift
 //  BBActors
 //
 //  Created by Hossein Hajimirza on 10/5/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeRow: View {
+struct CharactersRow: View {
     let characterModel: CharacterModel
     
     var statusColor: Color {
@@ -25,9 +25,11 @@ struct HomeRow: View {
     
     private let width = UIScreen.main.bounds.width
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
-            CharacterImage(imageURL: characterModel.img)
+            CharacterImage(imageURL: characterModel.img, size: UIScreen.main.bounds.size.width / 4)
                 .clipShape(Circle())
                 .overlay(
                     Circle()
@@ -82,6 +84,7 @@ struct HomeRow: View {
             }
             Spacer(minLength: 0)
         }
+        .foregroundColor(colorScheme == .light ? .black : .white)
         .padding(24)
         .background(.ultraThinMaterial)
         .cornerRadius(8)
@@ -92,7 +95,7 @@ struct HomeRow: View {
 
 struct HomeRow_Previews: PreviewProvider {
     static var previews: some View {
-        HomeRow(characterModel: CharacterModel())
+        CharactersRow(characterModel: CharacterModel())
             .preferredColorScheme(.dark)
     }
 }

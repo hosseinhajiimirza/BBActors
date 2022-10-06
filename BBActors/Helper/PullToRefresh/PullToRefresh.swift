@@ -24,7 +24,6 @@ struct PullToRefresh: View {
                 Spacer()
                     .onAppear {
                         if needRefresh {
-                            
                             needRefresh = false
                             onRefresh()
                         }
@@ -32,11 +31,9 @@ struct PullToRefresh: View {
             }
             HStack {
                 Spacer()
-
                 if needRefresh {
-                    ProgressView()
+                    CustomActivityIndicator()
                 }
-                
                 Spacer()
             }
         }.padding(.top, -50)

@@ -14,7 +14,7 @@ struct BBActorsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            Home()
+            BreakingBadTabView()
         }
     }
 }

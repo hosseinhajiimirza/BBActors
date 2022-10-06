@@ -1,5 +1,5 @@
 //
-//  Home.swift
+//  Characters.swift
 //  BBActors
 //
 //  Created by Hossein Hajimirza on 10/5/22.
@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct Home: View {
-    @StateObject private var viewModel: ViewModel = .init()
+struct Characters: View {
+    @StateObject private var charactersViewModel: CharactersViewModel = .init()
     @State private var searchText = ""
     @State private var navTitle = "Loading..."
     
     var filteredCharactersModel: [CharacterModel]? {
         if searchText.isEmpty {
-            return viewModel.charactersModel
+            return charactersViewModel.charactersModel
         } else {
-            if let characterModel = viewModel.charactersModel {
+            if let characterModel = charactersViewModel.charactersModel {
                 return characterModel.filter({$0.name.localizedCaseInsensitiveContains(searchText)})
             }
             
@@ -29,7 +29,7 @@ struct Home: View {
             ScrollView(.vertical, showsIndicators: false) {
                 PullToRefresh(coordinateSpaceName: "pullToRefresh") {
                     Task {
-                        viewModel.fetchData()
+                        charactersViewModel.fetchData()
                     }
                 }
                 
@@ -40,7 +40,9 @@ struct Home: View {
                         } else {
                             VStack {
                                 ForEach(filteredCharactersModel) { characterModel in
-                                    HomeRow(characterModel: characterModel)
+                                    NavigationLink(destination: DetailView(characterModel: characterModel)) {
+                                        CharactersRow(characterModel: characterModel)
+                                    }
                                 }
                             }
                         }
@@ -56,13 +58,13 @@ struct Home: View {
             .navigationBarTitleDisplayMode(.inline)
         }
         .task {
-            viewModel.fetchData()
+            charactersViewModel.fetchData()
         }
     }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        Characters()
     }
 }

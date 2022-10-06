@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  CharactersViewModel.swift
 //  BBActors
 //
 //  Created by Hossein Hajimirza on 10/5/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class ViewModel: ObservableObject {
+final class CharactersViewModel: ObservableObject {
     @Published public var charactersModel: [CharacterModel]?
     
     private let networkManager: NetworkManager = .init()
@@ -20,7 +20,7 @@ final class ViewModel: ObservableObject {
                     self.charactersModel = model
                 }
             case .failure(let error):
-                print("ERROR - \(error)")
+                print("HomeViewModel Fetching Error - \(error)")
             }
         }
     }

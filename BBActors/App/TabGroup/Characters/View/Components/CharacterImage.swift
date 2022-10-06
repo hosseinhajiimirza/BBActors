@@ -10,7 +10,7 @@ import SwiftUI
 struct CharacterImage: View {
     let imageURL: String
     // to know the screen size:
-    let size = UIScreen.main.bounds.size.width / 4
+    let size: CGFloat
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -46,6 +46,6 @@ struct CharacterImage: View {
 
 struct CharacterImage_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterImage(imageURL: "")
+        CharacterImage(imageURL: "", size: UIScreen.main.bounds.size.width / 4)
     }
 }
