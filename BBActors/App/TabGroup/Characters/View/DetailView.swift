@@ -14,13 +14,36 @@ struct DetailView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            Color.black
-            if !characterModel.img.isEmpty {
-                CharacterImage(imageURL: characterModel.img, size: size.height)
-                    .overlay(.ultraThinMaterial.opacity(0.6))
+            VStack {
+                if let url = URL(string: characterModel.img) {
+                    AsyncImage(url: url) { image in
+                        image
+                            .resizable()
+                            .frame(width: size.width, height: size.width * 1.5)
+                            .scaledToFit()
+                    } placeholder: {
+                        Rectangle()
+                            .fill(Color.secondary.opacity(0.2))
+                            .cornerRadius(8)
+                            .overlay(
+                                ProgressView()
+                                    .tint(.secondary)
+                            )
+                            .frame(width: size.width, height: size.width * 1.5)
+                    }
+                } else {
+                    Image(systemName: "person.fill")
+                        .resizable()
+                        .frame(width: size.width, height: size.width * 1.5)
+                        .scaledToFit()
+                        .padding(32)
+                        .opacity(0.5)
+                }
+                Spacer()
+                Spacer()
             }
-            Color.black.opacity(0.4)
-                .frame(height: size.height / 2.8)
+            .overlay(.ultraThinMaterial.opacity(0.6))
+
             VStack {
                 Spacer()
                 Spacer()
@@ -35,12 +58,11 @@ struct DetailView: View {
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
                 .padding()
-                .background(.ultraThinMaterial.opacity(0.5))
+                .background(.black.opacity(0.5))
                 .cornerRadius(8)
                 Spacer()
             }
         }
-        .ignoresSafeArea()
     }
 }
 
