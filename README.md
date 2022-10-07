@@ -2,6 +2,34 @@
 
 You can get some information about Breaking Bad characters, episodes, and etc. also you can read some quotes by these characters.
 
+Characters Tab:
+
+
+https://user-images.githubusercontent.com/81614806/194431324-763937ed-bcca-4ad8-9b1e-32bda98673a9.MP4
+
+Episodes Tab:
+
+
+
+https://user-images.githubusercontent.com/81614806/194431619-5c6269b4-7ac2-43f7-ad9a-2619e81eadcb.MP4
+
+Quotes Tab:
+
+
+
+https://user-images.githubusercontent.com/81614806/194431679-854da16d-5c40-43a1-97b2-fe46f322e9a2.MP4
+
+
+Refreshable Views With Custom Animations:
+
+
+
+
+https://user-images.githubusercontent.com/81614806/194432049-cd5a4006-4449-49ab-8ece-0b9079dc19d6.MP4
+
+
+
+
 # App Information:
 
 Framework: SwiftUI
@@ -25,7 +53,7 @@ Features:
 
 # Notes
 
-In SwiftUI, We can bind everthing! We can use @Binding for some types like Int, String and ... . If we want to bind the viewModel, We should use @StateObject for the first view and for the next views we have two choices: 1. we use @ObservedObject if we want to bind it for a few views، it's common to use @ObservedObject, 2. but if we want to bind and share it in many views we should use @EnvironmentObject. if we use this property wrapper we should add .environmentObject modifier for this view and also for the preview. if we don't use it, xcode won't shows the preview.
+In SwiftUI, We can bind everthing! We can use @Binding for some types like Int, String and ... . If we want to bind the viewModel, We should use @StateObject for the first view and for the next views we have two choices: 1. we use @ObservedObject if we want to bind it for a few views، it's common to use @ObservedObject, 2. but if we want to bind and share it with many views we should use @EnvironmentObject. if we use this property wrapper we should add .environmentObject modifier for this view and also for the preview. if we don't use it, xcode won't shows the preview.
 
 it's easy to use search bar on NavigationView. but we can only use List to have the .searchable modifier. it will be in iOS 16 and we can add .searchbale modifire to scrollView too. and also if we choose this way, sometimes we have a little bugs when we are working with the List.
 So we can create custom search bar, but I used the nav search bar.
